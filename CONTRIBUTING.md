@@ -134,7 +134,7 @@ Releases are automated via GitHub Actions. To release a new version:
    - Merge the PR to `main`
 
 2. **Trigger the release workflow**:
-   - Go to [GitHub Actions → Release](https://github.com/selfagency/beans-mcp/actions/workflows/release.yml)
+         - Go to [GitHub Actions → Release](https://github.com/voxslopuli/beans-mcp/actions/workflows/release.yml)
    - Click **Run workflow** (dropdown)
    - Enter the version number (e.g., `1.2.3`)
    - Click **Run workflow**

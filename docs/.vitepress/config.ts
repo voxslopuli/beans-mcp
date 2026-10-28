@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
 
-const SITE_URL = 'https://beans-mcp.self.agency';
+const SITE_URL = 'https://beans-mcp.voxslopuli.org';
 
 export default defineConfig({
   title: 'beans-mcp',
@@ -55,7 +55,7 @@ export default defineConfig({
       {
         text: 'v0.5.x',
         items: [
-          { text: 'Changelog', link: 'https://github.com/selfagency/beans-mcp/releases' },
+          { text: 'Changelog', link: 'https://github.com/voxslopuli/beans-mcp/releases' },
           { text: 'Contributing', link: '/development/contributing' },
         ],
       },
@@ -98,7 +98,7 @@ export default defineConfig({
       ],
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/selfagency/beans-mcp' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/voxslopuli/beans-mcp' }],
 
     footer: {
       message: 'Released under the MIT License.',
@@ -110,7 +110,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/selfagency/beans-mcp/edit/main/docs/:path',
+      pattern: 'https://github.com/voxslopuli/beans-mcp/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
   },

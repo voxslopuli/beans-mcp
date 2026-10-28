@@ -1,41 +1,41 @@
 {
   "linkset": [
     {
-      "anchor": "https://beans-mcp.self.agency/mcp",
+      "anchor": "https://beans-mcp.voxslopuli.org/mcp",
       "service-desc": [
         {
-          "href": "https://beans-mcp.self.agency/server.json",
+          "href": "https://beans-mcp.voxslopuli.org/server.json",
           "type": "application/json"
         },
         {
-          "href": "https://beans-mcp.self.agency/.well-known/mcp/server-card.json",
+          "href": "https://beans-mcp.voxslopuli.org/.well-known/mcp/server-card.json",
           "type": "application/json"
         }
       ],
       "service-doc": [
         {
-          "href": "https://beans-mcp.self.agency/guide/getting-started",
+          "href": "https://beans-mcp.voxslopuli.org/guide/getting-started",
           "type": "text/html"
         }
       ],
       "status": [
         {
-          "href": "https://beans-mcp.self.agency/.well-known/mcp.json",
+          "href": "https://beans-mcp.voxslopuli.org/.well-known/mcp.json",
           "type": "application/json"
         }
       ],
       "describedby": [
         {
-          "href": "https://beans-mcp.self.agency/.well-known/oauth-protected-resource",
+          "href": "https://beans-mcp.voxslopuli.org/.well-known/oauth-protected-resource",
           "type": "application/json"
         }
       ]
     },
     {
-      "anchor": "https://beans-mcp.self.agency/.well-known/api-catalog",
+      "anchor": "https://beans-mcp.voxslopuli.org/.well-known/api-catalog",
       "api-catalog": [
         {
-          "href": "https://beans-mcp.self.agency/.well-known/api-catalog"
+          "href": "https://beans-mcp.voxslopuli.org/.well-known/api-catalog"
         }
       ]
     }

@@ -20,6 +20,8 @@ async function flushMicrotasks(): Promise<void> {
 // Module mocks — hoisted by vitest before any imports
 // ---------------------------------------------------------------------------
 
+vi.mock('../server/bundledCli', () => ({ resolveBundledBeansCli: () => null }));
+
 vi.mock('../server/backend', () => {
   // Must be a regular function (not an arrow function) so `new BeansCliBackend()` works.
   function BeansCliBackend(this: unknown) {

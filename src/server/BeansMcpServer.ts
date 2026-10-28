@@ -16,6 +16,7 @@ import {
   MAX_TITLE_LENGTH,
 } from '../types';
 import { makeTextAndStructured } from '../utils';
+import { resolveBundledBeansCli } from './bundledCli';
 
 import type { BackendInterface } from './backend';
 
@@ -1178,7 +1179,7 @@ Arguments:
 Options:
   --workspace <path>     Alias for workspace-root positional argument
   --workspace-root <p>   Alias for workspace-root positional argument
-  --cli-path <path>      Path to the beans CLI executable (default: beans)
+  --cli-path <path>      Path to the beans CLI executable (default: bundled beans CLI, else beans in PATH)
   --port <number>        MCP server port (default: ${DEFAULT_MCP_PORT})
   --log-dir <path>       Directory for log output (default: workspace root)
   -h, --help             Show this help message
@@ -1208,7 +1209,8 @@ export function parseCliArgs(argv: string[]): {
 
   let workspaceRoot = process.cwd();
   let workspaceExplicit = false;
-  let cliPath = 'beans';
+  // Prefer the bundled beans CLI (platform optionalDependency); fall back to PATH.
+  let cliPath = resolveBundledBeansCli() ?? 'beans';
   const envPort = Number.parseInt(process.env.BEANS_VSCODE_MCP_PORT || process.env.BEANS_MCP_PORT || '', 10);
   let port = Number.isInteger(envPort) && envPort > 0 ? envPort : DEFAULT_MCP_PORT;
   let logDir: string | undefined;

@@ -10,6 +10,8 @@ import {
 import type { BackendInterface } from '../server/backend';
 import type { BeanRecord } from '../types';
 
+vi.mock('../server/bundledCli', () => ({ resolveBundledBeansCli: () => null }));
+
 describe('parseCliArgs', () => {
   it('should parse positional workspace root', () => {
     const args = ['/path/to/workspace'];

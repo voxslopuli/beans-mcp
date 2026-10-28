@@ -1,13 +1,13 @@
 {
   "serverInfo": {
-    "name": "io.github.selfagency/beans-mcp",
+    "name": "io.github.voxslopuli/beans-mcp",
     "title": "beans-mcp",
-    "version": "0.6.2",
+    "version": "0.7.0",
     "description": "Interact with the Beans CLI issue tracker agentically"
   },
-  "documentationUrl": "https://beans-mcp.self.agency/guide/getting-started",
+  "documentationUrl": "https://beans-mcp.voxslopuli.org/guide/getting-started",
   "repository": {
-    "url": "https://github.com/selfagency/beans-mcp",
+    "url": "https://github.com/voxslopuli/beans-mcp",
     "source": "github"
   },
   "transports": [
@@ -15,7 +15,7 @@
       "type": "stdio",
       "package": {
         "registryType": "npm",
-        "identifier": "@selfagency/beans-mcp",
+        "identifier": "@voxslopuli/beans-mcp",
         "version": "0.6.2"
       }
     }

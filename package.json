@@ -1,6 +1,6 @@
 {
-  "name": "@selfagency/beans-mcp",
-  "version": "0.6.2",
+  "name": "@voxslopuli/beans-mcp",
+  "version": "0.7.0",
   "private": false,
   "description": "MCP (Model Context Protocol) server for Beans issue tracker",
   "keywords": [
@@ -10,19 +10,18 @@
     "mcp",
     "model-context-protocol"
   ],
-  "homepage": "https://github.com/selfagency/beans-mcp",
+  "homepage": "https://github.com/voxslopuli/beans-mcp",
   "bugs": {
-    "url": "https://github.com/selfagency/beans-mcp/issues"
+    "url": "https://github.com/voxslopuli/beans-mcp/issues"
   },
   "license": "MIT",
   "author": {
-    "name": "Daniel Sieradski",
-    "email": "daniel@self.agency",
-    "url": "https://self.agency"
+    "name": "Grand Slopulissimo",
+    "email": "slopulissimo@voxslopuli.org"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/selfagency/beans-mcp.git"
+      "url": "git+https://github.com/voxslopuli/beans-mcp.git"
   },
   "bin": {
     "beans-mcp": "dist/beans-mcp-server.cjs"
@@ -57,6 +56,8 @@
     "lint:fix": "oxlint --fix",
     "prepare": "husky",
     "validate-registry-metadata": "node ./scripts/validate-registry-metadata.js",
+    "fetch-beans-binaries": "node ./scripts/fetch-beans-binaries.js",
+    "publish-beans-cli": "node ./scripts/publish-beans-cli.js",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
@@ -90,5 +91,17 @@
   "engines": {
     "node": ">=18"
   },
-  "mcpName": "io.github.selfagency/beans-mcp"
+  "mcpName": "io.github.voxslopuli/beans-mcp",
+  "beansCli": {
+    "version": "0.4.2",
+    "repository": "hmans/beans",
+    "releasePrefix": "beans_"
+  },
+  "optionalDependencies": {
+    "@voxslopuli/beans-cli-darwin-arm64": "0.4.2",
+    "@voxslopuli/beans-cli-darwin-x64": "0.4.2",
+    "@voxslopuli/beans-cli-linux-arm64": "0.4.2",
+    "@voxslopuli/beans-cli-linux-x64": "0.4.2",
+    "@voxslopuli/beans-cli-win32-x64": "0.4.2"
+  }
 }

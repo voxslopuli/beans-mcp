@@ -5,6 +5,7 @@ export default defineConfig([
     // ESM library entry point
     entry: { index: 'src/index.ts' },
     format: ['esm'],
+    external: [/^@voxslopuli\/beans-cli-/],
     outDir: 'dist',
     target: 'node18',
     splitting: false,
@@ -16,6 +17,7 @@ export default defineConfig([
     // CJS library entry point
     entry: { index: 'src/index.ts' },
     format: ['cjs'],
+    external: [/^@voxslopuli\/beans-cli-/],
     outDir: 'dist',
     outExtension: () => ({ js: '.cjs' }),
     target: 'node18',
@@ -28,6 +30,7 @@ export default defineConfig([
     // CLI binary entry point
     entry: { 'beans-mcp-server': 'src/cli.ts' },
     format: ['cjs'],
+    external: [/^@voxslopuli\/beans-cli-/],
     outDir: 'dist',
     outExtension: () => ({ js: '.cjs' }),
     target: 'node18',

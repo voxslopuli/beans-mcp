@@ -1,0 +1,78 @@
+name: Release beans CLI packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "beans CLI version (e.g. 0.4.2)"
+        required: true
+        type: string
+      dry_run:
+        description: "Stage only, no publish"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-beans-cli
+  cancel-in-progress: false
+
+jobs:
+  stage:
+    name: Download + verify + stage binaries
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch and stage binaries
+        run: node scripts/fetch-beans-binaries.js --version "${{ inputs.version }}"
+
+      - name: Verify staged binaries
+        run: |
+          set -euo pipefail
+          for dir in build/beans-cli/*/; do
+            bin="$dir/bin/beans"
+            [[ -x "$bin" || -x "${bin}.exe" ]]
+          done
+
+      - name: Upload staged packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: beans-cli-packages
+          path: build/beans-cli/
+          if-no-files-found: error
+
+  publish:
+    name: Publish platform packages to npm
+    needs: stage
+    if: ${{ !inputs.dry_run }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: npm
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Download staged packages
+        uses: actions/download-artifact@v4
+        with:
+          name: beans-cli-packages
+          path: build/beans-cli
+
+      - name: Publish to npm
+        run: node scripts/publish-beans-cli.js
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

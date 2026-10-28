@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@modelcontextprotocol/sdk':
         specifier: ^1.29.0
-        version: 1.29.0(zod@4.3.6)
+        version: 1.29.0(supports-color@7.2.0)(zod@4.3.6)
       '@octokit/rest':
         specifier: ^22.0.1
         version: 22.0.1
@@ -43,7 +43,7 @@ importers:
         version: 0.21.1
       tsup:
         specifier: 8.5.1
-        version: 8.5.1(postcss@8.5.10)(typescript@6.0.3)(yaml@2.8.2)
+        version: 8.5.1(postcss@8.5.10)(supports-color@7.2.0)(typescript@6.0.3)(yaml@2.8.2)
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -59,6 +59,22 @@ importers:
       zx:
         specifier: ^8.8.5
         version: 8.8.5
+    optionalDependencies:
+      '@voxslopuli/beans-cli-darwin-arm64':
+        specifier: 0.4.2
+        version: 0.4.2
+      '@voxslopuli/beans-cli-darwin-x64':
+        specifier: 0.4.2
+        version: 0.4.2
+      '@voxslopuli/beans-cli-linux-arm64':
+        specifier: 0.4.2
+        version: 0.4.2
+      '@voxslopuli/beans-cli-linux-x64':
+        specifier: 0.4.2
+        version: 0.4.2
+      '@voxslopuli/beans-cli-win32-x64':
+        specifier: 0.4.2
+        version: 0.4.2
 
 packages:
 
@@ -1384,6 +1400,36 @@ packages:
 
   '@vitest/utils@4.1.5':
     resolution: {integrity: sha512-76wdkrmfXfqGjueGgnb45ITPyUi1ycZ4IHgC2bhPDUfWHklY/q3MdLOAB+TF1e6xfl8NxNY0ZYaPCFNWSsw3Ug==}
+
+  '@voxslopuli/beans-cli-darwin-arm64@0.4.2':
+    resolution: {integrity: sha512-nkzhLADrqyzA1GFN6BlUxq0AVRJsfEWdrqRKt7g0T+bUal8DCuXO6JJMjFcUFct7sz70LSwOTt/Spyh7AYFcqg==}
+    cpu: [arm64]
+    os: [darwin]
+    hasBin: true
+
+  '@voxslopuli/beans-cli-darwin-x64@0.4.2':
+    resolution: {integrity: sha512-nRsp6IVuZXdyf/FuWz3AK64mv4t4LuS2ViTG+/z9jx6ytCwpj1RptMZnQmUAcykAZulXtpCxMz7Ol5uhqtclqw==}
+    cpu: [x64]
+    os: [darwin]
+    hasBin: true
+
+  '@voxslopuli/beans-cli-linux-arm64@0.4.2':
+    resolution: {integrity: sha512-4UXiYGbgaTNjjKhOVr0ZyV6Ik46Ddy4jTAcJuKULQ5XKnbYu9aY8jojQTtMet4wWIxLRm38K24daVK3tTl9Dxg==}
+    cpu: [arm64]
+    os: [linux]
+    hasBin: true
+
+  '@voxslopuli/beans-cli-linux-x64@0.4.2':
+    resolution: {integrity: sha512-I3oEi/Auz678vf9FCEbQtDCW7tBxvuNyzDXiVfQ8FLF3eIR7doA13DPKxSnOBsiJis+H5KIczdpYk1spvRJekA==}
+    cpu: [x64]
+    os: [linux]
+    hasBin: true
+
+  '@voxslopuli/beans-cli-win32-x64@0.4.2':
+    resolution: {integrity: sha512-LQJePi3vrfYZsz44h0D0pyc5jhGAy/UjgfkD9ncI9bLama8mYiIHZG4rouNVwDjJrRTSA6uq1DOZ3A49lJEBCw==}
+    cpu: [x64]
+    os: [win32]
+    hasBin: true
 
   '@vue/compiler-core@3.5.32':
     resolution: {integrity: sha512-4x74Tbtqnda8s/NSD6e1Dr5p1c8HdMU5RWSjMSUzb8RTcUQqevDCxVAitcLBKT+ie3o0Dl9crc/S/opJM7qBGQ==}
@@ -3035,7 +3081,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@modelcontextprotocol/sdk@1.29.0(zod@4.3.6)':
+  '@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.3.6)':
     dependencies:
       '@hono/node-server': 1.19.13(hono@4.12.14)
       ajv: 8.18.0
@@ -3045,8 +3091,8 @@ snapshots:
       cross-spawn: 7.0.6
       eventsource: 3.0.7
       eventsource-parser: 3.0.6
-      express: 5.2.1
-      express-rate-limit: 8.2.1(express@5.2.1)
+      express: 5.2.1(supports-color@7.2.0)
+      express-rate-limit: 8.2.1(express@5.2.1(supports-color@7.2.0))
       hono: 4.12.14
       jose: 6.1.3
       json-schema-typed: 8.0.2
@@ -3553,6 +3599,21 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
 
+  '@voxslopuli/beans-cli-darwin-arm64@0.4.2':
+    optional: true
+
+  '@voxslopuli/beans-cli-darwin-x64@0.4.2':
+    optional: true
+
+  '@voxslopuli/beans-cli-linux-arm64@0.4.2':
+    optional: true
+
+  '@voxslopuli/beans-cli-linux-x64@0.4.2':
+    optional: true
+
+  '@voxslopuli/beans-cli-win32-x64@0.4.2':
+    optional: true
+
   '@vue/compiler-core@3.5.32':
     dependencies:
       '@babel/parser': 7.29.2
@@ -3709,11 +3770,11 @@ snapshots:
 
   birpc@2.9.0: {}
 
-  body-parser@2.2.2:
+  body-parser@2.2.2(supports-color@7.2.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       http-errors: 2.0.1
       iconv-lite: 0.7.2
       on-finished: 2.4.1
@@ -3806,9 +3867,11 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   depd@2.0.0: {}
 
@@ -3950,25 +4013,25 @@ snapshots:
 
   expect-type@1.3.0: {}
 
-  express-rate-limit@8.2.1(express@5.2.1):
+  express-rate-limit@8.2.1(express@5.2.1(supports-color@7.2.0)):
     dependencies:
-      express: 5.2.1
+      express: 5.2.1(supports-color@7.2.0)
       ip-address: 10.0.1
 
-  express@5.2.1:
+  express@5.2.1(supports-color@7.2.0):
     dependencies:
       accepts: 2.0.0
-      body-parser: 2.2.2
+      body-parser: 2.2.2(supports-color@7.2.0)
       content-disposition: 1.0.1
       content-type: 1.0.5
       cookie: 0.7.2
       cookie-signature: 1.2.2
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 2.1.1
+      finalhandler: 2.1.1(supports-color@7.2.0)
       fresh: 2.0.0
       http-errors: 2.0.1
       merge-descriptors: 2.0.0
@@ -3979,9 +4042,9 @@ snapshots:
       proxy-addr: 2.0.7
       qs: 6.15.0
       range-parser: 1.2.1
-      router: 2.2.0
-      send: 1.2.1
-      serve-static: 2.2.1
+      router: 2.2.0(supports-color@7.2.0)
+      send: 1.2.1(supports-color@7.2.0)
+      serve-static: 2.2.1(supports-color@7.2.0)
       statuses: 2.0.2
       type-is: 2.0.1
       vary: 1.1.2
@@ -4004,9 +4067,9 @@ snapshots:
 
   fflate@0.8.2: {}
 
-  finalhandler@2.1.1:
+  finalhandler@2.1.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -4515,9 +4578,9 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.60.1
       fsevents: 2.3.3
 
-  router@2.2.0:
+  router@2.2.0(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       depd: 2.0.0
       is-promise: 4.0.0
       parseurl: 1.3.3
@@ -4531,9 +4594,9 @@ snapshots:
 
   semver@7.7.4: {}
 
-  send@1.2.1:
+  send@1.2.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
@@ -4547,12 +4610,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@2.2.1:
+  serve-static@2.2.1(supports-color@7.2.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 1.2.1
+      send: 1.2.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4714,13 +4777,13 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tsup@8.5.1(postcss@8.5.10)(typescript@6.0.3)(yaml@2.8.2):
+  tsup@8.5.1(postcss@8.5.10)(supports-color@7.2.0)(typescript@6.0.3)(yaml@2.8.2):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.27.3)
       cac: 6.7.14
       chokidar: 4.0.3
       consola: 3.4.2
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       esbuild: 0.27.3
       fix-dts-default-cjs-exports: 1.0.1
       joycon: 3.1.1

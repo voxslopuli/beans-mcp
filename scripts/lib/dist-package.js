@@ -13,6 +13,7 @@ export function createDistPackage(rootPkg) {
     repository,
     license,
     author,
+    type: 'module',
     main: './index.cjs',
     module: './index.js',
     types: './index.d.ts',
@@ -20,6 +21,7 @@ export function createDistPackage(rootPkg) {
     bin: {
       'beans-mcp': 'beans-mcp-server.cjs',
     },
+    optionalDependencies: rootPkg.optionalDependencies,
     exports: {
       '.': {
         import: './index.js',
