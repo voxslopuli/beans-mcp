@@ -4,18 +4,18 @@
 
 - Node.js 18+
 - pnpm 10+
-- [Beans CLI](https://github.com/hmans/beans) available in `PATH` (or provide `--cli-path`)
+- [Beans CLI](https://github.com/hmans/beans) — bundled via platform-specific `@voxslopuli/beans-cli-*` optional dependencies, or available in `PATH` (or provide `--cli-path`)
 
 ## Run the server
 
 ```bash
-npx @selfagency/beans-mcp /path/to/workspace
+npx @voxslopuli/beans-mcp /path/to/workspace
 ```
 
 Or with explicit flags:
 
 ```bash
-npx @selfagency/beans-mcp --workspace-root /path/to/workspace --cli-path beans --port 39173
+npx @voxslopuli/beans-mcp --workspace-root /path/to/workspace --cli-path beans --port 39173
 ```
 
 ## CLI arguments

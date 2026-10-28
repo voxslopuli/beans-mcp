@@ -1,8 +1,8 @@
 {
-  "issuer": "https://beans-mcp.self.agency",
-  "authorization_endpoint": "https://beans-mcp.self.agency/oauth/authorize",
-  "token_endpoint": "https://beans-mcp.self.agency/oauth/token",
-  "jwks_uri": "https://beans-mcp.self.agency/.well-known/jwks.json",
+  "issuer": "https://beans-mcp.voxslopuli.org",
+  "authorization_endpoint": "https://beans-mcp.voxslopuli.org/oauth/authorize",
+  "token_endpoint": "https://beans-mcp.voxslopuli.org/oauth/token",
+  "jwks_uri": "https://beans-mcp.voxslopuli.org/.well-known/jwks.json",
   "grant_types_supported": [
     "authorization_code",
     "client_credentials",

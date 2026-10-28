@@ -1,16 +1,16 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.selfagency/beans-mcp",
+  "name": "io.github.voxslopuli/beans-mcp",
   "description": "Interact with the Beans CLI issue tracker agentically",
   "repository": {
-    "url": "https://github.com/selfagency/beans-mcp",
+    "url": "https://github.com/voxslopuli/beans-mcp",
     "source": "github"
   },
   "version": "0.6.2",
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@selfagency/beans-mcp",
+      "identifier": "@voxslopuli/beans-mcp",
       "version": "0.6.2",
       "transport": {
         "type": "stdio"

@@ -90,4 +90,4 @@ Allow: /status.json
 Disallow:
 
 Content-Signal: ai-train=no, search=yes, ai-input=yes
-Sitemap: https://beans-mcp.self.agency/sitemap.xml
+Sitemap: https://beans-mcp.voxslopuli.org/sitemap.xml

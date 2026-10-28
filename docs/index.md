@@ -4,7 +4,7 @@
 
 Production-ready MCP server for the [Beans](https://github.com/hmans/beans) issue tracker.
 
-Public documentation: [beans-mcp.self.agency](https://beans-mcp.self.agency)
+Public documentation: [beans-mcp.voxslopuli.org](https://beans-mcp.voxslopuli.org)
 
 ## What you get
 
@@ -29,11 +29,11 @@ Public documentation: [beans-mcp.self.agency](https://beans-mcp.self.agency)
 ## Install
 
 ```bash
-pnpm add @selfagency/beans-mcp
+      pnpm add @voxslopuli/beans-mcp
 ```
 
 Or run directly:
 
 ```bash
-npx @selfagency/beans-mcp /path/to/workspace
+      npx @voxslopuli/beans-mcp /path/to/workspace
 ```

@@ -2,7 +2,7 @@
 
 ## Agent discovery endpoints
 
-The documentation site publishes the following discovery artifacts at `https://beans-mcp.self.agency`:
+The documentation site publishes the following discovery artifacts at `https://beans-mcp.voxslopuli.org`:
 
 - `/robots.txt`
 - `/server.json`
@@ -58,7 +58,7 @@ The MCP Registry is a public, open, and searchable database of MCP servers and s
 
 The MCP Registry is hosted and maintained by the MCP community. It is not affiliated with any specific company or organization.
 
-The MCP Registry is available at: <https://mcp-registry.self.agency>
+The MCP Registry is available at: <https://registry.modelcontextprotocol.io>
 
 The MCP Registry publishes discovery artifacts at:
 

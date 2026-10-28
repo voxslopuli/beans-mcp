@@ -11,9 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## What's Changed
 
-- Fix Beans CLI compatibility checks by @selfagency in https://github.com/selfagency/beans-mcp/pull/11
+- Fix Beans CLI compatibility checks by @voxslopuli in https://github.com/voxslopuli/beans-mcp/pull/11
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.6.1...v0.6.2
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.6.1...v0.6.2
 
 _Source: changes from v0.6.1 to v0.6.2._
 
@@ -21,13 +21,13 @@ _Source: changes from v0.6.1 to v0.6.2._
 
 - Startup compatibility checks now compare the installed `beans` CLI version
   against the hardcoded supported Beans version (`0.4.2`) instead of the
-  `@selfagency/beans-mcp` package version.
+  `@voxslopuli/beans-mcp` package version.
 - README and configuration docs now describe package versioning and Beans CLI
   compatibility separately.
 
 ## [0.6.1] - 2026-04-18
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.6.0...v0.6.1
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.6.0...v0.6.1
 
 _Source: changes from v0.6.0 to v0.6.1._
 
@@ -35,24 +35,24 @@ _Source: changes from v0.6.0 to v0.6.1._
 
 ## What's Changed
 
-- chore(deps): bump vite from 8.0.3 to 8.0.5 in the npm_and_yarn group across 1 directory by @dependabot[bot] in https://github.com/selfagency/beans-mcp/pull/7
-- chore(deps-dev): bump the npm_and_yarn group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/selfagency/beans-mcp/pull/8
-- fix: harden CLI parsing and backend safety by @selfagency in https://github.com/selfagency/beans-mcp/pull/10
-- chore(deps-dev): bump hono from 4.12.12 to 4.12.14 in the npm_and_yarn group across 1 directory by @dependabot[bot] in https://github.com/selfagency/beans-mcp/pull/9
+- chore(deps): bump vite from 8.0.3 to 8.0.5 in the npm_and_yarn group across 1 directory by @dependabot[bot] in https://github.com/voxslopuli/beans-mcp/pull/7
+- chore(deps-dev): bump the npm_and_yarn group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/voxslopuli/beans-mcp/pull/8
+- fix: harden CLI parsing and backend safety by @voxslopuli in https://github.com/voxslopuli/beans-mcp/pull/10
+- chore(deps-dev): bump hono from 4.12.12 to 4.12.14 in the npm_and_yarn group across 1 directory by @dependabot[bot] in https://github.com/voxslopuli/beans-mcp/pull/9
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.5.0...v0.6.0
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.5.0...v0.6.0
 
 _Source: changes from v0.5.0 to v0.6.0._
 
 ## [0.5.2] - 2026-04-06
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.5.1...v0.5.2
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.5.1...v0.5.2
 
 _Source: changes from v0.5.1 to v0.5.2._
 
 ## [0.5.1] - 2026-04-06
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.5.0...v0.5.1
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.5.0...v0.5.1
 
 _Source: changes from v0.5.0 to v0.5.1._
 
@@ -60,15 +60,15 @@ _Source: changes from v0.5.0 to v0.5.1._
 
 ## What's Changed
 
-- chore(deps): bump the npm_and_yarn group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/selfagency/beans-mcp/pull/2
-- chore(deps): bump the npm_and_yarn group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/selfagency/beans-mcp/pull/4
-- feat: bulk create/update, body on create, path stripping, frontmatter quoting, list caching by @selfagency in https://github.com/selfagency/beans-mcp/pull/5
+- chore(deps): bump the npm_and_yarn group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/voxslopuli/beans-mcp/pull/2
+- chore(deps): bump the npm_and_yarn group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/voxslopuli/beans-mcp/pull/4
+- feat: bulk create/update, body on create, path stripping, frontmatter quoting, list caching by @voxslopuli in https://github.com/voxslopuli/beans-mcp/pull/5
 
 ## New Contributors
 
-- @dependabot[bot] made their first contribution in https://github.com/selfagency/beans-mcp/pull/2
+- @dependabot[bot] made their first contribution in https://github.com/voxslopuli/beans-mcp/pull/2
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.4.2...v0.5.0
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.4.2...v0.5.0
 
 _Source: changes from v0.4.2 to v0.5.0._
 
@@ -76,20 +76,20 @@ _Source: changes from v0.4.2 to v0.5.0._
 
 ## What's Changed
 
-- feat: align MCP server with Beans 0.4.x + prime workflow by @selfagency in https://github.com/selfagency/beans-mcp/pull/3
+- feat: align MCP server with Beans 0.4.x + prime workflow by @voxslopuli in https://github.com/voxslopuli/beans-mcp/pull/3
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.1.4...v0.4.2
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.1.4...v0.4.2
 
 _Source: changes from v0.1.4 to v0.4.2._
 
 ### Changed
 
-- Versioning policy now tracks upstream Beans versions (e.g. Beans `0.4.2` ↔ `@selfagency/beans-mcp@0.4.2`).
+- Versioning policy now tracks upstream Beans versions (e.g. Beans `0.4.2` ↔ `@voxslopuli/beans-mcp@0.4.2`).
 - MCP server metadata version now defaults to package version instead of a hardcoded fallback.
 
 ### Added
 
-- Startup version compatibility warning: the server compares `beans` CLI version with `@selfagency/beans-mcp` version and warns on mismatch.
+- Startup version compatibility warning: the server compares `beans` CLI version with `@voxslopuli/beans-mcp` version and warns on mismatch.
 - Version probe failures are warning-only; startup continues in best-effort mode.
 - `beans_query` now supports `operation: "ready"` to return actionable beans.
 - `beans_view` now supports multi-ID lookups via `beanIds`.
@@ -100,13 +100,13 @@ _Source: changes from v0.1.4 to v0.4.2._
 
 ## [0.1.4] - 2026-02-27
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.1.3...v0.1.4
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.1.3...v0.1.4
 
 _Source: changes from v0.1.3 to v0.1.4._
 
 ## [0.1.3] - 2026-02-27
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.1.2...v0.1.3
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.1.2...v0.1.3
 
 _Source: changes from v0.1.2 to v0.1.3._
 
@@ -114,28 +114,28 @@ _Source: changes from v0.1.2 to v0.1.3._
 
 ## What's Changed
 
-- feat: support body updates and de-duplicate MCP results by @selfagency in https://github.com/selfagency/beans-mcp/pull/1
+- feat: support body updates and de-duplicate MCP results by @voxslopuli in https://github.com/voxslopuli/beans-mcp/pull/1
 
 ## New Contributors
 
-- @selfagency made their first contribution in https://github.com/selfagency/beans-mcp/pull/1
+- @voxslopuli made their first contribution in https://github.com/voxslopuli/beans-mcp/pull/1
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.1.1...v0.1.2
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.1.1...v0.1.2
 
 _Source: changes from v0.1.1 to v0.1.2._
 
 ## [0.1.1] - 2026-02-25
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/compare/v0.1.0...v0.1.1
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/compare/v0.1.0...v0.1.1
 
 _Source: changes from v0.1.0 to v0.1.1._
 
 ## [0.1.0] - 2026-02-25
 
-**Full Changelog**: https://github.com/selfagency/beans-mcp/commits/v0.1.0
+**Full Changelog**: https://github.com/voxslopuli/beans-mcp/commits/v0.1.0
 
 Initial public release. Extracted and substantially reworked from the
-[selfagency.beans-vscode](https://marketplace.visualstudio.com/items?itemName=selfagency.beans-vscode)
+[voxslopuli.beans-vscode](https://marketplace.visualstudio.com/items?itemName=voxslopuli.beans-vscode)
 VS Code extension's embedded MCP server into a standalone, independently
 installable package.
 
@@ -248,8 +248,8 @@ path after connecting.
 - Eliminated all `any` types: `queryHandler` opts, `backend.ts` filter
   parameter, and `queryHelpers.ts` return type narrowed to
   `Record<string, unknown>`.
-- README: corrected package import name (`@selfagency/beans-mcp`), server
+- README: corrected package import name (`@voxslopuli/beans-mcp`), server
   default name (`beans-mcp-server`), removed the non-existent `allowedRoots`
   option from the `createBeansMcpServer` docs.
 
-[Unreleased]: https://github.com/selfagency/beans-mcp/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/voxslopuli/beans-mcp/compare/v0.1.0...HEAD

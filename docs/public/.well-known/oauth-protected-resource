@@ -1,7 +1,7 @@
 {
-  "resource": "https://beans-mcp.self.agency/mcp",
+  "resource": "https://beans-mcp.voxslopuli.org/mcp",
   "authorization_servers": [
-    "https://beans-mcp.self.agency"
+    "https://beans-mcp.voxslopuli.org"
   ],
   "scopes_supported": [
     "mcp:read",

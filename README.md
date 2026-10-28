@@ -1,24 +1,43 @@
-# @selfagency/beans-mcp 🫘
+# @voxslopuli/beans-mcp 🫘
 
 <img src="docs/assets/icon.png" alt="beans-mcp icon" width="300" />
 
-[![Test & Build](https://github.com/selfagency/beans-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/selfagency/beans-mcp/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/selfagency/beans-mcp/graph/badge.svg?token=udeAJyu8Nu)](https://codecov.io/gh/selfagency/beans-mcp) ![NPM Version](https://img.shields.io/npm/v/@selfagency/beans-mcp)
+[![Test & Build](https://github.com/voxslopuli/beans-mcp/actions/workflows/test.yml/badge.svg)](https://github.com/voxslopuli/beans-mcp/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/voxslopuli/beans-mcp/graph/badge.svg?token=udeAJyu8Nu)](https://codecov.io/gh/voxslopuli/beans-mcp) ![NPM Version](https://img.shields.io/npm/v/@voxslopuli/beans-mcp)
 
 MCP (Model Context Protocol) server for [Beans](https://github.com/hmans/beans) issue tracker. Provides programmatic and CLI interfaces for AI-powered interactions with Beans workspaces.
 
-Documentation: [beans-mcp.self.agency](https://beans-mcp.self.agency)
+Documentation: [beans-mcp.voxslopuli.org](https://beans-mcp.voxslopuli.org)
 
 > 🤖 **Try Beans fully-integrated with GitHub Copilot in VS Code! Install the <a href="https://marketplace.visualstudio.com/items?itemName=selfagency.beans-vscode">selfagency.beans-vscode</a> extension.**
 
 ## Usage
 
 ```bash
-npx @selfagency/beans-mcp /path/to/workspace
+npx @voxslopuli/beans-mcp /path/to/workspace
 ```
+
+### Bundled beans CLI
+
+The beans CLI binary is bundled via platform-specific optional dependencies
+(`@voxslopuli/beans-cli-darwin-arm64`, `-darwin-x64`, `-linux-arm64`,
+`-linux-x64`, `-win32-x64`), pinned to the supported Beans version (`0.4.2`).
+At startup the server resolves the bundled binary first and falls back to the
+`beans` command in `PATH`. An explicit `--cli-path` always wins.
+
+To release new platform packages when Beans publishes a new version:
+
+```bash
+# 1. Bump beansCli.version + optionalDependencies in package.json
+pnpm fetch-beans-binaries --version <beans-version>
+# 2. Verify staged binaries in build/beans-cli/, then publish
+pnpm publish-beans-cli            # add --dry-run to preview
+```
+
+Or dispatch the **Release beans CLI packages** workflow on GitHub Actions.
 
 ### Versioning
 
-`@selfagency/beans-mcp` has its own package versioning. Compatibility with the
+`@voxslopuli/beans-mcp` has its own package versioning. Compatibility with the
 [Beans](https://github.com/hmans/beans) CLI is tracked separately.
 
 At startup, the server compares the installed `beans` CLI version against the
@@ -530,7 +549,7 @@ npm install beans-mcp
 ### Example
 
 ```typescript
-import { createBeansMcpServer, parseCliArgs } from '@selfagency/beans-mcp';
+import { createBeansMcpServer, parseCliArgs } from '@voxslopuli/beans-mcp';
 
 const server = await createBeansMcpServer({
   workspaceRoot: '/path/to/workspace',
@@ -576,8 +595,8 @@ Export of GraphQL schema, Zod validation schemas, and TypeScript types for Beans
 This package ships a built-in Agent Skill under `skills/` and also publishes that skill in a format that fits the broader open skills ecosystem surfaced by [skills.sh](https://skills.sh/).
 
 - Skill path in package: `skills/beans-mcp/SKILL.md`
-- Published skill artifact: `https://beans-mcp.self.agency/.well-known/agent-skills/beans-mcp/SKILL.md`
-- Published discovery index: `https://beans-mcp.self.agency/.well-known/agent-skills/index.json`
+- Published skill artifact: `https://beans-mcp.voxslopuli.org/.well-known/agent-skills/beans-mcp/SKILL.md`
+- Published discovery index: `https://beans-mcp.voxslopuli.org/.well-known/agent-skills/index.json`
 - Compatible with discovery tools that scan: `node_modules/**/skills/*/SKILL.md`
 
 That means you can use it with npm-based workflows such as `skills-npm`, while also pointing ecosystem tooling at the published skill artifact and discovery index used by skills catalogs like `skills.sh`.
