@@ -1,6 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { parseCliArgs } from '../server/BeansMcpServer';
 
+vi.mock('../server/bundledCli', () => ({ resolveBundledBeansCli: () => null }));
+
 describe('parseCliArgs', () => {
   it('should parse workspace root positional argument', () => {
     const result = parseCliArgs(['/workspace']);
