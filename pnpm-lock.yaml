@@ -59,6 +59,22 @@ importers:
       zx:
         specifier: ^8.8.5
         version: 8.8.5
+    optionalDependencies:
+      '@voxslopuli/beans-cli-darwin-arm64':
+        specifier: 0.4.2
+        version: 0.4.2
+      '@voxslopuli/beans-cli-darwin-x64':
+        specifier: 0.4.2
+        version: 0.4.2
+      '@voxslopuli/beans-cli-linux-arm64':
+        specifier: 0.4.2
+        version: 0.4.2
+      '@voxslopuli/beans-cli-linux-x64':
+        specifier: 0.4.2
+        version: 0.4.2
+      '@voxslopuli/beans-cli-win32-x64':
+        specifier: 0.4.2
+        version: 0.4.2
 
 packages:
 
@@ -1384,6 +1400,36 @@ packages:
 
   '@vitest/utils@4.1.5':
     resolution: {integrity: sha512-76wdkrmfXfqGjueGgnb45ITPyUi1ycZ4IHgC2bhPDUfWHklY/q3MdLOAB+TF1e6xfl8NxNY0ZYaPCFNWSsw3Ug==}
+
+  '@voxslopuli/beans-cli-darwin-arm64@0.4.2':
+    resolution: {integrity: sha512-nkzhLADrqyzA1GFN6BlUxq0AVRJsfEWdrqRKt7g0T+bUal8DCuXO6JJMjFcUFct7sz70LSwOTt/Spyh7AYFcqg==}
+    cpu: [arm64]
+    os: [darwin]
+    hasBin: true
+
+  '@voxslopuli/beans-cli-darwin-x64@0.4.2':
+    resolution: {integrity: sha512-nRsp6IVuZXdyf/FuWz3AK64mv4t4LuS2ViTG+/z9jx6ytCwpj1RptMZnQmUAcykAZulXtpCxMz7Ol5uhqtclqw==}
+    cpu: [x64]
+    os: [darwin]
+    hasBin: true
+
+  '@voxslopuli/beans-cli-linux-arm64@0.4.2':
+    resolution: {integrity: sha512-4UXiYGbgaTNjjKhOVr0ZyV6Ik46Ddy4jTAcJuKULQ5XKnbYu9aY8jojQTtMet4wWIxLRm38K24daVK3tTl9Dxg==}
+    cpu: [arm64]
+    os: [linux]
+    hasBin: true
+
+  '@voxslopuli/beans-cli-linux-x64@0.4.2':
+    resolution: {integrity: sha512-I3oEi/Auz678vf9FCEbQtDCW7tBxvuNyzDXiVfQ8FLF3eIR7doA13DPKxSnOBsiJis+H5KIczdpYk1spvRJekA==}
+    cpu: [x64]
+    os: [linux]
+    hasBin: true
+
+  '@voxslopuli/beans-cli-win32-x64@0.4.2':
+    resolution: {integrity: sha512-LQJePi3vrfYZsz44h0D0pyc5jhGAy/UjgfkD9ncI9bLama8mYiIHZG4rouNVwDjJrRTSA6uq1DOZ3A49lJEBCw==}
+    cpu: [x64]
+    os: [win32]
+    hasBin: true
 
   '@vue/compiler-core@3.5.32':
     resolution: {integrity: sha512-4x74Tbtqnda8s/NSD6e1Dr5p1c8HdMU5RWSjMSUzb8RTcUQqevDCxVAitcLBKT+ie3o0Dl9crc/S/opJM7qBGQ==}
@@ -3552,6 +3598,21 @@ snapshots:
       '@vitest/pretty-format': 4.1.5
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
+
+  '@voxslopuli/beans-cli-darwin-arm64@0.4.2':
+    optional: true
+
+  '@voxslopuli/beans-cli-darwin-x64@0.4.2':
+    optional: true
+
+  '@voxslopuli/beans-cli-linux-arm64@0.4.2':
+    optional: true
+
+  '@voxslopuli/beans-cli-linux-x64@0.4.2':
+    optional: true
+
+  '@voxslopuli/beans-cli-win32-x64@0.4.2':
+    optional: true
 
   '@vue/compiler-core@3.5.32':
     dependencies:
