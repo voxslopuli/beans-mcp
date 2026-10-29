@@ -219,9 +219,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # npm >= 11.5.1 required for OIDC trusted publishing
+          node-version: "24"
           cache: "pnpm"
-          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -232,11 +232,14 @@ jobs:
       - name: Publish to npm (Trusted Publishers + provenance)
         run: |
           set -euo pipefail
+          npm install -g npm@latest
           if [[ "${{ needs.detect-tag.outputs.release_tag }}" == *-* ]]; then
             DIST_TAG=next
           else
             DIST_TAG=latest
           fi
+          # No NODE_AUTH_TOKEN: auth via GitHub OIDC (trusted publisher)
+          unset NODE_AUTH_TOKEN
           npm publish ./dist --access public --provenance --tag "$DIST_TAG"
 
   publish-to-mcp-registry:

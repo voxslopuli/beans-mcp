@@ -18,6 +18,7 @@ const STAGE_DIR = resolve(ROOT, 'build/beans-cli');
 
 async function main() {
   const dryRun = process.argv.includes('--dry-run');
+  const provenance = process.argv.includes('--provenance');
   const entries = (await readdir(STAGE_DIR, { withFileTypes: true })).filter(e => e.isDirectory());
   if (entries.length === 0) {
     throw new Error(`No staged packages in ${STAGE_DIR}. Run fetch-beans-binaries.js first.`);
@@ -27,6 +28,7 @@ async function main() {
     const pkgDir = join(STAGE_DIR, entry.name);
     const pkg = JSON.parse(await readFile(join(pkgDir, 'package.json'), 'utf8'));
     const args = ['publish', pkgDir, '--access', 'public'];
+    if (provenance) args.push('--provenance');
     if (dryRun) args.push('--dry-run');
     console.log(`${dryRun ? '[dry-run] ' : ''}Publishing ${pkg.name}@${pkg.version}...`);
     await execFileAsync('npm', args, { stdio: 'inherit' });
