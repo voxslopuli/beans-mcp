@@ -1,0 +1,20 @@
+name: OIDC probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check OIDC
+        run: |
+          if [[ -n "${ACTIONS_ID_TOKEN_REQUEST_TOKEN:-}" ]]; then
+            echo "OIDC: AVAILABLE"
+          else
+            echo "OIDC: MISSING"
+          fi
