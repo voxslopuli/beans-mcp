@@ -1,6 +1,6 @@
 {
   "name": "@voxslopuli/beans-mcp",
-  "version": "0.7.0",
+  "version": "0.7.1-rc.1",
   "private": false,
   "description": "MCP (Model Context Protocol) server for Beans issue tracker",
   "keywords": [
