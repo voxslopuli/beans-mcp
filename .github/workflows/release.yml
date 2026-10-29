@@ -331,20 +331,23 @@ jobs:
 
   rollback-tag-on-failure:
     name: Rollback release tag on failure
-    needs: [ detect-tag, publish-to-npm, publish-to-mcp-registry, create-github-release-stable ]
+    needs: [ detect-tag, publish-to-npm, publish-to-mcp-registry, create-github-release-prerelease, create-github-release-stable ]
     if: always() && needs.detect-tag.outputs.release_tag != '' && needs.detect-tag.outputs.ready == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: Determine if rollback is needed
         id: check_failure
         run: |
-          if [[ "${{ needs.publish-to-npm.result }}" == "success" ]] && \
-             [[ "${{ needs.publish-to-mcp-registry.result }}" == "success" || "${{ needs.publish-to-mcp-registry.result }}" == "skipped" ]] && \
-             [[ "${{ needs.create-github-release-stable.result }}" == "success" ]]; then
+          ok() { [[ "$1" == "success" || "$1" == "skipped" ]]; }
+          if ok "${{ needs.publish-to-npm.result }}" && \
+             ok "${{ needs.publish-to-mcp-registry.result }}" && \
+             ok "${{ needs.create-github-release-prerelease.result }}" && \
+             ok "${{ needs.create-github-release-stable.result }}"; then
             echo "all_critical_jobs_passed=true" >> $GITHUB_OUTPUT
             echo "All critical post-publish jobs succeeded. No rollback needed."
           else
