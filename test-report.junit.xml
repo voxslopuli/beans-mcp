@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="318" failures="4" errors="0" time="1.610142999">
+    <testsuite name="src/test/BeansMcpServer.test.ts" timestamp="2026-10-28T23:50:57.779Z" hostname="selfagency-m1mb.local" tests="53" failures="1" errors="0" skipped="0" time="0.259620416">
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should parse positional workspace root" time="0.001862875">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should parse --workspace-root flag" time="0.000174792">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should allow both positional and --workspace-root (flag overwrites positional)" time="0.000110542">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should parse --cli-path flag" time="0.000133625">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should use default cli-path" time="0.007758166">
+            <failure message="expected &apos;/Users/daniel/Developer/beans/beans-m…&apos; to be &apos;beans&apos; // Object.is equality" type="AssertionError">
+AssertionError: expected &apos;/Users/daniel/Developer/beans/beans-m…&apos; to be &apos;beans&apos; // Object.is equality
+
+Expected: &quot;beans&quot;
+Received: &quot;/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans&quot;
+
+ ❯ src/test/BeansMcpServer.test.ts:42:28
+            </failure>
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should parse --port flag" time="0.00031675">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should use default port" time="0.000124333">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should parse --log-dir flag" time="0.000112375">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should handle combined flags" time="0.000210833">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should reject suspicious CLI paths with shell metacharacters" time="0.000684042">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should reject CLI paths with pipes" time="0.007940083">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should reject CLI paths with redirects" time="0.000239916">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should reject CLI paths with backticks" time="0.000145417">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should reject CLI paths with dollar expansion" time="0.000127083">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="parseCliArgs &gt; should allow safe CLI paths with slashes and dashes" time="0.000096208">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="extractVersionFromOutput &gt; extracts plain semver" time="0.000154">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="extractVersionFromOutput &gt; extracts version prefixed by v" time="0.001264125">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="extractVersionFromOutput &gt; extracts version from descriptive CLI output" time="0.000212459">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="extractVersionFromOutput &gt; returns null for empty or non-version output" time="0.002357125">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should create an MCP server instance" time="0.026045208">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should use provided backend implementation" time="0.009334708">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should set server name from options" time="0.00858475">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should set server version from options" time="0.005693958">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should accept logDir option" time="0.009451584">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should accept cliPath option" time="0.005107291">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should handle empty list operation" time="0.005238416">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should handle list with beans" time="0.006706625">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should call backend init with prefix" time="0.00885825">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should create beans with required fields" time="0.011081458">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should create beans with optional status" time="0.012302125">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should create beans with optional priority" time="0.015074875">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should handle bean updates" time="0.010914">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should delete beans" time="0.005478208">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should open config" time="0.012968709">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should get GraphQL schema" time="0.004516959">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should read output log" time="0.004701416">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should read bean file" time="0.005550916">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should edit bean file" time="0.004788958">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should create bean file" time="0.00481375">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should atomically update bean frontmatter" time="0.013725">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should create beans with body field" time="0.004863708">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should treat description as a deprecated alias for body" time="0.0049145">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should bulk create beans and return successCount/failedCount" time="0.005593375">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should apply default parent to bulk-created beans that omit their own" time="0.00483175">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should bulk update beans and return successCount/failedCount" time="0.013382375">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="createBeansMcpServer &gt; should delete bean file" time="0.004627417">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="MutableBackend &gt; delegates every method to the inner backend" time="0.0018945">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="MutableBackend &gt; setInner swaps the delegate so subsequent calls go to the new backend" time="0.000399333">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="MutableBackend &gt; archive throws TypeError when unsupported by the inner backend" time="0.000214792">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="resolveWorkspaceFromRoots &gt; returns the pathname of the first file:// root" time="0.00014275">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="resolveWorkspaceFromRoots &gt; skips non-file:// URIs and returns the first file:// one" time="0.0000725">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="resolveWorkspaceFromRoots &gt; returns null when no file:// roots are present" time="0.000059417">
+        </testcase>
+        <testcase classname="src/test/BeansMcpServer.test.ts" name="resolveWorkspaceFromRoots &gt; returns null when listRoots throws" time="0.000072667">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/backend.frontmatter.test.ts" timestamp="2026-10-28T23:50:57.789Z" hostname="selfagency-m1mb.local" tests="5" failures="0" errors="0" skipped="0" time="0.060908333">
+        <testcase classname="src/test/backend.frontmatter.test.ts" name="BeansCliBackend.updateBeanFrontmatter &gt; atomically updates frontmatter fields and preserves body" time="0.02916375">
+        </testcase>
+        <testcase classname="src/test/backend.frontmatter.test.ts" name="BeansCliBackend.updateBeanFrontmatter &gt; removes nullable frontmatter fields when null is provided" time="0.0075915">
+        </testcase>
+        <testcase classname="src/test/backend.frontmatter.test.ts" name="BeansCliBackend.updateBeanFrontmatter &gt; preserves inline comments on title while normalizing quoting" time="0.005964208">
+        </testcase>
+        <testcase classname="src/test/backend.frontmatter.test.ts" name="BeansCliBackend.updateBeanFrontmatter &gt; handles CRLF frontmatter and single-quoted title values" time="0.006739375">
+        </testcase>
+        <testcase classname="src/test/backend.frontmatter.test.ts" name="BeansCliBackend.createBeanFile &gt; returns a user-friendly message when file exists and overwrite is false" time="0.009053125">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/bundledCli.test.ts" timestamp="2026-10-28T23:50:57.789Z" hostname="selfagency-m1mb.local" tests="3" failures="0" errors="0" skipped="0" time="0.004906959">
+        <testcase classname="src/test/bundledCli.test.ts" name="resolveBundledBeansCli &gt; returns null for unsupported platform/arch combinations" time="0.00134075">
+        </testcase>
+        <testcase classname="src/test/bundledCli.test.ts" name="resolveBundledBeansCli &gt; returns a path or null for the current platform without throwing" time="0.000741375">
+        </testcase>
+        <testcase classname="src/test/bundledCli.test.ts" name="beansCli version pin &gt; matches the supported beans CLI version constant" time="0.001639625">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/handlers.unit.test.ts" timestamp="2026-10-28T23:50:57.790Z" hostname="selfagency-m1mb.local" tests="29" failures="0" errors="0" skipped="0" time="0.029451167">
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; getBeanById returns bean when found" time="0.002036959">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; getBeanById throws when not found" time="0.001201458">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; getBeanById uses provided beans list without calling backend.list" time="0.000361333">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; initHandler calls backend.init and wraps result" time="0.001056041">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; archiveHandler delegates to backend.archive" time="0.000302875">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; archiveHandler throws TypeError when archive is unsupported" time="0.000284875">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; viewHandler returns bean structured content" time="0.000269125">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; viewHandler supports multiple bean ids and reports missing ids" time="0.000623708">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; createHandler delegates to backend.create" time="0.000300791">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; createHandler emits deprecation warning when description is used" time="0.000230209">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; editHandler delegates to backend.update" time="0.002304584">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; updateHandler delegates body updates to backend.update" time="0.00395225">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; updateHandler passes ifMatch through to backend.update" time="0.000741125">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; updateHandler passes bodyAppend/bodyReplace through to backend.update" time="0.000510041">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; reopenHandler throws if current status mismatches" time="0.000330584">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; reopenHandler updates when status matches" time="0.0003475">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; reopenHandler cascades reopen to closed descendants" time="0.009022875">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; updateHandler cascades close status to descendants" time="0.000472125">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; updateHandler returns cascade errors when descendant updates fail" time="0.000521333">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; completeTasksHandler marks markdown tasks complete" time="0.000650833">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; deleteHandler enforces draft/scrapped unless force" time="0.000439958">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; deleteHandler supports batch deletion with per-item results" time="0.000243291">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; beanFileHandler routes operations" time="0.000454041">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; beanFileHandler throws on unsupported operation" time="0.000197958">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; outputHandler read and show" time="0.00023925">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; queryHandler delegates to handleQueryOperation" time="0.00038425">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; queryHandler supports graphql passthrough operation" time="0.000253167">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; queryHandler throws TypeError when graphql passthrough is unsupported" time="0.000159292">
+        </testcase>
+        <testcase classname="src/test/handlers.unit.test.ts" name="Handlers (unit) &gt; bulkCreateHandler emits warning summary for deprecated description usage" time="0.000264125">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/parseCliArgs.test.ts" timestamp="2026-10-28T23:50:57.793Z" hostname="selfagency-m1mb.local" tests="11" failures="1" errors="0" skipped="0" time="0.013165958">
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should parse workspace root positional argument" time="0.006509125">
+            <failure message="expected &apos;/Users/daniel/Developer/beans/beans-m…&apos; to be &apos;beans&apos; // Object.is equality" type="AssertionError">
+AssertionError: expected &apos;/Users/daniel/Developer/beans/beans-m…&apos; to be &apos;beans&apos; // Object.is equality
+
+Expected: &quot;beans&quot;
+Received: &quot;/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans&quot;
+
+ ❯ src/test/parseCliArgs.test.ts:8:28
+            </failure>
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should parse --workspace-root flag" time="0.000875542">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should mark workspaceExplicit false when no workspace arg given" time="0.00051825">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should parse --cli-path flag" time="0.0001695">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should parse --port flag" time="0.000164875">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should reject non-numeric --port values" time="0.000766041">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should reject non-positive --port values" time="0.00017875">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should parse --log-dir flag" time="0.000114417">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; should reject suspicious CLI paths" time="0.000177958">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; --help / -h &gt; --help writes help text to stdout and exits with 0" time="0.002031917">
+        </testcase>
+        <testcase classname="src/test/parseCliArgs.test.ts" name="parseCliArgs &gt; --help / -h &gt; -h writes help text to stdout and exits with 0" time="0.000354083">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/protocol.e2e.test.ts" timestamp="2026-10-28T23:50:57.794Z" hostname="selfagency-m1mb.local" tests="67" failures="0" errors="0" skipped="0" time="0.49584275">
+        <testcase classname="src/test/protocol.e2e.test.ts" name="tool registration &gt; registers all expected tools" time="0.039974958">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="tool registration &gt; all tools have titles" time="0.010749667">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="tool registration &gt; all tools have descriptions" time="0.010566959">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_init &gt; calls backend.init and returns initialized: true" time="0.012861167">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_init &gt; passes prefix to backend.init" time="0.008326542">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_init &gt; rejects prefix longer than 32 characters" time="0.007126042">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_archive &gt; archives completed/scrapped beans via backend" time="0.012881291">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_view &gt; returns full bean details" time="0.009408667">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_view &gt; returns isError when bean not found" time="0.016568625">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_view &gt; rejects empty beanId" time="0.014086834">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_view &gt; rejects beanId longer than MAX_ID_LENGTH (128)" time="0.005914208">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_view &gt; supports multi-id bean lookup via beanIds" time="0.00699">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_create &gt; creates a bean with required fields" time="0.0178845">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_create &gt; passes optional fields to backend" time="0.005582333">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_create &gt; rejects missing title" time="0.004943208">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_create &gt; rejects empty title" time="0.004853958">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_create &gt; rejects missing type" time="0.005281042">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_create &gt; rejects title exceeding MAX_TITLE_LENGTH (1024)" time="0.005639084">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_update &gt; updates a bean status" time="0.00678525">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_update &gt; passes blocking and blockedBy arrays" time="0.0064175">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_update &gt; rejects missing beanId" time="0.006399792">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_update &gt; cascades close status to descendants" time="0.016884042">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_update &gt; surfaces backend errors as isError result" time="0.007107125">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_update &gt; passes ifMatch through to backend.update" time="0.017042416">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_update &gt; passes bodyAppend/bodyReplace through to backend.update" time="0.006043209">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_update &gt; rejects combining body with bodyAppend/bodyReplace" time="0.007028667">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_edit &gt; is registered and works identically to beans_update" time="0.005926042">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_reopen &gt; reopens a completed bean to todo" time="0.005483042">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_reopen &gt; returns isError if bean status does not match requiredCurrentStatus" time="0.005724625">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_reopen &gt; rejects unknown requiredCurrentStatus values" time="0.005393542">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_delete &gt; deletes a draft bean without force" time="0.013398708">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_delete &gt; refuses to delete a non-draft/non-scrapped bean without force" time="0.006716959">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_delete &gt; deletes any bean with force=true" time="0.008139708">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_delete &gt; defaults force to false — refuses non-draft bean when force omitted" time="0.004112708">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_delete &gt; supports batch deletion via beanIds with summary result" time="0.004680459">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; refresh returns all beans" time="0.0044705">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; filter passes statuses and types to backend.list" time="0.004410125">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; search passes query to backend.list and filters client-side" time="0.004388667">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; search with includeClosed=false excludes completed/scrapped beans" time="0.004015958">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; sort returns beans in the requested order" time="0.004452667">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; defaults operation to refresh" time="0.004107667">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; rejects unknown operation value" time="0.003953208">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; ready returns actionable todo beans only" time="0.003861416">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; llm_context returns prime instructions and optional write path" time="0.009188375">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; graphql operation proxies raw GraphQL to backend.queryGraphql" time="0.0041205">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_query &gt; graphql operation requires graphql string" time="0.004225375">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_bean_file &gt; read returns file content" time="0.004443417">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_bean_file &gt; edit calls editBeanFile with content" time="0.004181042">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_bean_file &gt; create calls createBeanFile" time="0.011744833">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_bean_file &gt; delete calls deleteBeanFile" time="0.003705917">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_bean_file &gt; update_frontmatter atomically updates selected frontmatter fields" time="0.004359875">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_bean_file &gt; rejects empty path" time="0.004174792">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_bean_file &gt; rejects update_frontmatter without fields" time="0.004288708">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_bean_file &gt; surfaces backend errors as isError" time="0.004241333">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_output &gt; read returns log content" time="0.004176875">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_output &gt; show returns a guidance message" time="0.004272709">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_output &gt; rejects lines value out of range" time="0.01018275">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_output &gt; defaults operation to read" time="0.003946">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_complete_tasks &gt; marks markdown tasks complete in bean body" time="0.004303166">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="beans_complete_tasks &gt; returns beanId hint when beanId is missing" time="0.003808042">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="response shape &gt; every successful response has at least one text content item" time="0.004112792">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="response shape &gt; tool result text is valid JSON" time="0.004399083">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="response shape &gt; isError result contains a non-empty error description" time="0.003832417">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="MCP roots &gt; server can request roots from a client that declares them" time="0.012774416">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="MCP roots &gt; server receives multiple roots in declaration order" time="0.003825666">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="MCP roots &gt; server receives empty roots list when client declares none" time="0.004018333">
+        </testcase>
+        <testcase classname="src/test/protocol.e2e.test.ts" name="MCP roots &gt; file:// URIs can be parsed to local paths" time="0.003729625">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/queryHelpers.test.ts" timestamp="2026-10-28T23:50:57.801Z" hostname="selfagency-m1mb.local" tests="44" failures="0" errors="0" skipped="0" time="0.017104916">
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should sort by status-priority-type-title (default)" time="0.00142925">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should sort by updated timestamp" time="0.008529958">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should sort by created timestamp" time="0.000137416">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should sort by id alphabetically" time="0.000112292">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should handle missing status in weight map" time="0.000664416">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should use default priority &quot;normal&quot; when missing" time="0.000108792">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should handle missing type in weight map" time="0.000104375">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should sort by title when other attributes are equal" time="0.000082875">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should compare different priorities within same status" time="0.000100208">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should compare different types within same status and priority" time="0.000096583">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should handle undefined updatedAt timestamps" time="0.000105792">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should handle both undefined updatedAt timestamps" time="0.000092708">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should handle undefined createdAt timestamps" time="0.000090292">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should handle both undefined createdAt timestamps" time="0.000082167">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should use 99 weight for unknown status in comparison" time="0.000061875">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should use 99 weight for unknown priority in comparison" time="0.000059375">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should use 99 weight for unknown type in comparison" time="0.000060541">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should sort by title when status, priority and type are equal" time="0.000094292">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should maintain stable sort when all attributes equal" time="0.000092">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should handle comparison of same updatedAt timestamps" time="0.000087916">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="sortBeans &gt; should handle comparison of same createdAt timestamps" time="0.00008925">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle llm_context operation" time="0.000433208">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle llm_context with writeInstructions" time="0.000766959">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle open_config operation" time="0.000088958">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle refresh operation" time="0.000116166">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle filter operation with statuses" time="0.000116167">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle filter operation with types" time="0.00009225">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle filter operation with tags" time="0.000126334">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle filter with multiple tags (OR logic)" time="0.000083625">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle search operation" time="0.000136166">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle search by id" time="0.000105875">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle search by tags" time="0.000089292">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should filter out closed beans in search when includeClosed is false" time="0.00012375">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle sort operation with custom mode" time="0.0000925">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should use default sort mode when not specified" time="0.000067459">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle empty search string" time="0.000078542">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle case-insensitive search" time="0.000076666">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle null tags gracefully" time="0.000100667">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle null statuses parameter" time="0.000081">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle null types parameter" time="0.000089458">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle search with non-string search parameter" time="0.000085958">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should include closed beans in search by default" time="0.000099459">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should handle search without includeClosed filter" time="0.00011075">
+        </testcase>
+        <testcase classname="src/test/queryHelpers.test.ts" name="handleQueryOperation &gt; should return only actionable todo beans for ready operation" time="0.000322041">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/releaseHelpers.test.ts" timestamp="2026-10-28T23:50:57.805Z" hostname="selfagency-m1mb.local" tests="31" failures="0" errors="0" skipped="0" time="0.012214292">
+        <testcase classname="src/test/releaseHelpers.test.ts" name="npm auth helpers &gt; prefers NPM_TOKEN over npmrc auth" time="0.001894541">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="npm auth helpers &gt; extracts the registry auth token from npmrc content" time="0.000269542">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="npm auth helpers &gt; builds a minimal userconfig for token publish auth" time="0.000116583">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="npm auth helpers &gt; returns auth candidates in precedence order for fallback attempts" time="0.000125792">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="npm auth helpers &gt; deduplicates auth candidates when tokens are identical" time="0.000632792">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="createDistPackage &gt; creates publish metadata without path-cleaning warnings" time="0.000227958">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="release state helpers &gt; includes docs server descriptors in release metadata files" time="0.000092667">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="release state helpers &gt; has no built-in 1Password item default" time="0.000102916">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="release state helpers &gt; prefers explicit env overrides for the OTP item" time="0.0000955">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="release state helpers &gt; builds rollback actions for publish failures after GitHub release creation" time="0.000107083">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="release state helpers &gt; does not roll back once the full release completed" time="0.000080166">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; passes when all metadata is synchronized" time="0.000211958">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when mcpName is missing from package.json" time="0.000274459">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when mcpName mismatches server.json name" time="0.000131584">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when version mismatches between package.json and server.json" time="0.00009325">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when package identifier mismatches package.json name" time="0.000087">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when server.json packages is missing" time="0.000080917">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; validates required server.json fields against schema definition" time="0.000241542">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; validates server.json name against schema pattern" time="0.000182084">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; validates required packages fields against schema definition" time="0.000118833">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; returns early when schema definitions are missing" time="0.000105958">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when server.json name is missing" time="0.000082042">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when package.json version is missing" time="0.000079583">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when packages[0].version is missing" time="0.000078666">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="registry metadata validation &gt; fails when packages[0].identifier is missing" time="0.000075708">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="formatValidationErrors &gt; formats error strings as a markdown list" time="0.000094125">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="formatValidationErrors &gt; returns an empty string for no errors" time="0.000064916">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="fetchRegistrySchema &gt; returns parsed JSON on a successful fetch" time="0.000789458">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="fetchRegistrySchema &gt; throws when the HTTP response is not ok" time="0.000997584">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="loadRegistryMetadata &gt; loads package.json and server.json from the given root directory" time="0.000693833">
+        </testcase>
+        <testcase classname="src/test/releaseHelpers.test.ts" name="validateRegistryMetadata &gt; returns combined sync and schema errors using real repo files" time="0.00048275">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/startBeansMcpServer.test.ts" timestamp="2026-10-28T23:50:57.808Z" hostname="selfagency-m1mb.local" tests="10" failures="2" errors="0" skipped="0" time="0.326690709">
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; starts without error when an explicit workspace root is given" time="0.229894125">
+            <system-err>
+[beans-mcp] v0.7.0 starting (port=39173, workspace=/my/workspace, cli=/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans, logDir=/my/workspace)
+
+[beans-mcp] warning: version mismatch detected (beans=0.7.0, supported=0.4.2, beans-mcp=0.7.0); continuing startup.
+
+            </system-err>
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; creates StdioServerTransport and connects" time="0.020017583">
+            <system-err>
+[beans-mcp] v0.7.0 starting (port=39173, workspace=/some/workspace, cli=/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans, logDir=/some/workspace)
+
+[beans-mcp] warning: version mismatch detected (beans=0.7.0, supported=0.4.2, beans-mcp=0.7.0); continuing startup.
+
+            </system-err>
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; sets BEANS_MCP_PORT env vars from --port" time="0.012795">
+            <system-err>
+[beans-mcp] v0.7.0 starting (port=12345, workspace=/w, cli=/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans, logDir=/w)
+
+[beans-mcp] warning: version mismatch detected (beans=0.7.0, supported=0.4.2, beans-mcp=0.7.0); continuing startup.
+
+            </system-err>
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; initialises BeansCliBackend with the explicit workspace root" time="0.01877075">
+            <system-err>
+[beans-mcp] v0.7.0 starting (port=12345, workspace=/explicit/root, cli=/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans, logDir=/explicit/root)
+
+[beans-mcp] warning: version mismatch detected (beans=0.7.0, supported=0.4.2, beans-mcp=0.7.0); continuing startup.
+
+            </system-err>
+            <failure message="expected &quot;vi.fn()&quot; to be called with arguments: [ &apos;/explicit/root&apos;, &apos;beans&apos;, …(1) ][90m
+
+Received:
+
+[1m  1st vi.fn() call:
+
+[22m[2m  [[22m
+[2m    &quot;/explicit/root&quot;,[22m
+[32m-   &quot;beans&quot;,[90m
+[32m-   Any&lt;String&gt;,[90m
+[31m+   &quot;/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans&quot;,[90m
+[31m+   &quot;/explicit/root&quot;,[90m
+[2m  ][22m
+[39m[90m
+
+Number of calls: [1m1[22m
+[39m" type="AssertionError">
+AssertionError: expected &quot;vi.fn()&quot; to be called with arguments: [ &apos;/explicit/root&apos;, &apos;beans&apos;, …(1) ]
+
+Received:
+
+  1st vi.fn() call:
+
+  [
+    &quot;/explicit/root&quot;,
+-   &quot;beans&quot;,
+-   Any&lt;String&gt;,
++   &quot;/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans&quot;,
++   &quot;/explicit/root&quot;,
+  ]
+
+
+Number of calls: 1
+
+ ❯ src/test/startBeansMcpServer.test.ts:127:40
+            </failure>
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; skips roots resolution when workspaceExplicit is true" time="0.01188525">
+            <system-err>
+[beans-mcp] v0.7.0 starting (port=12345, workspace=/explicit, cli=/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans, logDir=/explicit)
+
+[beans-mcp] warning: version mismatch detected (beans=0.7.0, supported=0.4.2, beans-mcp=0.7.0); continuing startup.
+
+            </system-err>
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; calls resolver and calls setInner when resolver returns a path" time="0.0074725">
+            <system-err>
+[beans-mcp] v0.7.0 starting (port=12345, workspace=(auto from roots), cli=/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans, logDir=/Users/daniel/Developer/beans/beans-mcp)
+
+[beans-mcp] workspace resolved from roots: /roots/detected/workspace
+
+[beans-mcp] warning: version mismatch detected (beans=0.7.0, supported=0.4.2, beans-mcp=0.7.0); continuing startup.
+
+            </system-err>
+            <failure message="expected last &quot;vi.fn()&quot; call to have been called with [ &apos;/roots/detected/workspace&apos;, …(2) ]" type="AssertionError">
+AssertionError: expected last &quot;vi.fn()&quot; call to have been called with [ &apos;/roots/detected/workspace&apos;, …(2) ]
+
+- Expected
++ Received
+
+  [
+    &quot;/roots/detected/workspace&quot;,
+-   &quot;beans&quot;,
++   &quot;/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans&quot;,
+    &quot;/Users/daniel/Developer/beans/beans-mcp&quot;,
+  ]
+
+ ❯ src/test/startBeansMcpServer.test.ts:156:40
+            </failure>
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; does not call setInner when resolver returns null" time="0.005083916">
+            <system-err>
+[beans-mcp] v0.7.0 starting (port=12345, workspace=(auto from roots), cli=/Users/daniel/Developer/beans/beans-mcp/node_modules/.pnpm/@voxslopuli+beans-cli-darwin-arm64@0.4.2/node_modules/@voxslopuli/beans-cli-darwin-arm64/bin/beans, logDir=/Users/daniel/Developer/beans/beans-mcp)
+
+[beans-mcp] warning: version mismatch detected (beans=0.7.0, supported=0.4.2, beans-mcp=0.7.0); continuing startup.
+
+            </system-err>
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; warns but proceeds when Beans CLI version differs from the supported Beans version" time="0.006356667">
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; warns but proceeds when Beans CLI version cannot be determined" time="0.005671333">
+        </testcase>
+        <testcase classname="src/test/startBeansMcpServer.test.ts" name="startBeansMcpServer &gt; does not emit mismatch warning when CLI version matches the supported Beans version" time="0.007298416">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/tools-integration.test.ts" timestamp="2026-10-28T23:50:57.811Z" hostname="selfagency-m1mb.local" tests="54" failures="0" errors="0" skipped="0" time="0.384659208">
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; init handler &gt; should call init with no prefix" time="0.021030125">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; init handler &gt; should call init with prefix" time="0.006934125">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; create handler validation &gt; should accept all valid bean types" time="0.006719958">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; create handler validation &gt; should accept all valid bean statuses" time="0.011124125">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; create handler validation &gt; should accept all valid priorities" time="0.018417792">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; create handler validation &gt; should accept optional description" time="0.008235792">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; create handler validation &gt; should accept optional parent" time="0.004914583">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edit handler &gt; should update status" time="0.006391625">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edit handler &gt; should update type" time="0.005671">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edit handler &gt; should update priority" time="0.005243584">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edit handler &gt; should update parent" time="0.010448208">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edit handler &gt; should clear parent when clearParent is true" time="0.011251542">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edit handler &gt; should update blocking relationships" time="0.013044542">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edit handler &gt; should update blockedBy relationships" time="0.006730125">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; reopen handler &gt; should reopen completed bean to todo" time="0.032293417">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; reopen handler &gt; should reopen scrapped bean to draft" time="0.005524542">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; delete handler &gt; should delete bean" time="0.005853875">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; delete handler &gt; should call backend delete with correct ID" time="0.005514292">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; query handler operations &gt; should list all beans" time="0.007007208">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; query handler operations &gt; should handle empty list" time="0.005165291">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; query handler operations &gt; should filter beans by status" time="0.005736458">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; query handler operations &gt; should sort beans" time="0.004644125">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; bean_file handler &gt; should read bean file" time="0.005100708">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; bean_file handler &gt; should create bean file" time="0.004627541">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; bean_file handler &gt; should edit bean file" time="0.004989166">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; bean_file handler &gt; should delete bean file" time="0.01228675">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; bean_file handler &gt; should handle file paths with subdirectories" time="0.004693625">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; output handler &gt; should read output log with default lines" time="0.005727209">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; output handler &gt; should read output log with custom line count" time="0.006718292">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; error handling &gt; should handle backend errors in list" time="0.005958291">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; error handling &gt; should handle backend errors in create" time="0.004519792">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; error handling &gt; should handle backend errors in update" time="0.00469">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; error handling &gt; should handle backend errors in delete" time="0.019690792">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; error handling &gt; should handle file operation errors" time="0.008569958">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; input constraints &gt; should enforce beanId length constraints" time="0.003555917">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; input constraints &gt; should enforce title length constraints in create" time="0.003186333">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; workspace configuration &gt; should initialize server with all options" time="0.003455375">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; workspace configuration &gt; should use default values when options not provided" time="0.003310875">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; backend method invocations &gt; should call list exactly once per query" time="0.003283125">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; backend method invocations &gt; should invoke graphqlSchema" time="0.003248541">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; backend method invocations &gt; should invoke openConfig" time="0.003084833">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; multiple operation sequences &gt; should handle create then view workflow" time="0.003112583">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; multiple operation sequences &gt; should handle create then edit workflow" time="0.00352">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; multiple operation sequences &gt; should handle create then delete workflow" time="0.00356075">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; multiple operation sequences &gt; should handle list then filter pattern" time="0.003658667">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; multiple operation sequences &gt; should handle file operations sequence" time="0.01390275">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edge cases in operations &gt; should validate title is required" time="0.003753083">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edge cases in operations &gt; should handle very long titles" time="0.003424416">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edge cases in operations &gt; should handle IDs with special characters" time="0.003864708">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edge cases in operations &gt; should handle update with no changes" time="0.003585791">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edge cases in operations &gt; should handle file paths with dots" time="0.010894125">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; edge cases in operations &gt; should handle file paths with Unicode characters" time="0.0032495">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; concurrent operations &gt; should handle multiple list calls" time="0.003243292">
+        </testcase>
+        <testcase classname="src/test/tools-integration.test.ts" name="Tool Handler Integration &gt; concurrent operations &gt; should handle mixed operations concurrently" time="0.003719709">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/test/utils.test.ts" timestamp="2026-10-28T23:50:57.817Z" hostname="selfagency-m1mb.local" tests="11" failures="0" errors="0" skipped="0" time="0.005578291">
+        <testcase classname="src/test/utils.test.ts" name="isPathWithinRoot &gt; should return true for paths within root" time="0.001447791">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="isPathWithinRoot &gt; should return false for paths outside root" time="0.000153041">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="isPathWithinRoot &gt; should return false for paths with parent traversal" time="0.00011375">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="isPathWithinRoot &gt; should handle relative path normalization" time="0.000088584">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="isPathWithinRoot &gt; should return false when root and target are the same" time="0.000076">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="isPathWithinRoot &gt; should handle paths with trailing slashes" time="0.000076375">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="makeTextAndStructured &gt; should serialize object as JSON text" time="0.001708084">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="makeTextAndStructured &gt; should preserve arbitrary fields" time="0.000131083">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="makeTextAndStructured &gt; should include nested bean objects in JSON text" time="0.000111667">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="makeTextAndStructured &gt; should handle arrays in JSON text" time="0.000083416">
+        </testcase>
+        <testcase classname="src/test/utils.test.ts" name="makeTextAndStructured &gt; should handle null and undefined values" time="0.00011725">
+        </testcase>
+    </testsuite>
+</testsuites>
