@@ -58,13 +58,15 @@ jobs:
     if: ${{ !inputs.dry_run }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    environment: npm
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          registry-url: "https://registry.npmjs.org"
+          # npm >= 11.5.1 required for OIDC trusted publishing
+          node-version: "24"
 
       - name: Download staged packages
         uses: actions/download-artifact@v4
@@ -73,6 +75,8 @@ jobs:
           path: build/beans-cli
 
       - name: Publish to npm
-        run: node scripts/publish-beans-cli.js
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm install -g npm@latest
+          # No NODE_AUTH_TOKEN: auth via GitHub OIDC (trusted publisher)
+          unset NODE_AUTH_TOKEN
+          node scripts/publish-beans-cli.js --provenance
