@@ -2,7 +2,7 @@
   "serverInfo": {
     "name": "io.github.voxslopuli/beans-mcp",
     "title": "beans-mcp",
-    "version": "0.7.1-rc.1",
+    "version": "0.7.1",
     "description": "Interact with the Beans CLI issue tracker agentically"
   },
   "documentationUrl": "https://beans-mcp.voxslopuli.org/guide/getting-started",
@@ -16,7 +16,7 @@
       "package": {
         "registryType": "npm",
         "identifier": "@voxslopuli/beans-mcp",
-        "version": "0.6.2"
+        "version": "0.7.1"
       }
     }
   ],
