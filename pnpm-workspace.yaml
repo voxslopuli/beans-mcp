@@ -6,5 +6,7 @@ minimumReleaseAgeExclude:
   - '@voxslopuli/beans-cli-linux-arm64@0.4.2'
   - '@voxslopuli/beans-cli-linux-x64@0.4.2'
   - '@voxslopuli/beans-cli-win32-x64@0.4.2'
+overrides:
+  ip-address: ^10.7.5
 onlyBuiltDependencies:
   - esbuild
